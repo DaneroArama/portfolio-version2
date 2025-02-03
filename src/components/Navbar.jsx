@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="dot"></div>
             </div>
             <div className="hire_me" id="hireMeButton">
-                <a href="Aung_Phone_Myat's_CV.pdf" download>
+                <a href="/public/Aung_Phone_Myat's_CV.pdf" download>
                     <span>Hire me</span>
                 </a>
             </div>
