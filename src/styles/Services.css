@@ -1,0 +1,61 @@
+#services {
+    padding: 60px 20px;
+    background-color: #000000;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 250px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service.scrolled-past {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    fill: #fddb3a;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.service p {
+    font-size: 1em;
+    color: #f6f4e6;
+}

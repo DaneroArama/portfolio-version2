@@ -1,0 +1,174 @@
+:root {
+    --color: #333;
+}
+
+.profile-picture {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+    padding: 10px;
+}
+
+.profile-picture img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    background: transparent;
+    mix-blend-mode: screen;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px) {
+    .profile-picture img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .profile-picture img {
+        max-width: 100%;
+    }
+
+    .container1 {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .about p {
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+
+    .background-text {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile-picture img {
+        max-width: 100%;
+    }
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/public/Danero.png') no-repeat center center;
+    background-size: cover;
+    filter: blur(50px);
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.home-container.fading .profile-picture img {
+    opacity: 0;
+    transform: scale(1.5);
+}
+
+.background-text {
+    position: absolute;
+    font-size: 10vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1;
+    white-space: nowrap;
+    padding-top: 350px;
+    mix-blend-mode: screen;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(3rem, 10vw, 10rem);
+    color: white;
+    padding: 0 clamp(1rem, 2vw, 3rem);
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+}
+
+h1:hover {
+    background-color: white;
+    color: black;
+}
+
+.container2 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: white;
+}
+
+.about {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    text-align: right;
+    font-size: 18px;
+    z-index: 3;
+    color: white;
+}
+
+.about p {
+    max-width: 52ch;
+    line-height: 0;
+    padding: 1em;
+}
+
+.container {
+    text-align: center;
+    color: var(--color);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        height: 20vh;
+    }
+
+    .container1 {
+        height: 20vh;
+    }
+}
+
+.container1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    overflow: hidden;
+}
+
+.blank, .other {
+    width: 100%;
+    min-height: 60vh;
+    background-color: transparent;
+}
