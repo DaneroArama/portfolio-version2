@@ -6,7 +6,7 @@ const Services = () => {
         const services = document.querySelectorAll('.service');
 
         const handleScroll = () => {
-            const triggerBottom = window.innerHeight * 0.2;
+            const triggerBottom = window.innerHeight * 0.1;
 
             services.forEach(service => {
                 const serviceTop = service.getBoundingClientRect().top;
