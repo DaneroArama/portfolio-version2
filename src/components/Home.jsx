@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import '../styles/Home.css';
+import './FadeContent';
+import FadeContent from "./FadeContent";
 
 const Home = () => {
     useEffect(() => {
@@ -58,6 +60,7 @@ const Home = () => {
     }, []);
 
     return (
+        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
         <section className="home-container" id="home">
             <div className="container">
                 <div className="container1">
@@ -76,6 +79,7 @@ const Home = () => {
                 </div>
             </div>
         </section>
+        </FadeContent>
     );
 };
 
